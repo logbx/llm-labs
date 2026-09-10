@@ -38,6 +38,25 @@ This is a markdown-based knowledge base optimized for use with [Obsidian](https:
    - Navigate through folders using any file browser or IDE
    - All content is in standard Markdown format
 
+### Validation
+
+This repository includes automated validation to ensure structure and quality:
+
+```bash
+# Run validation checks
+make test
+
+# Or directly
+python3 validate.py
+```
+
+The validation script checks:
+- Directory structure integrity
+- Required files exist
+- Markdown files are readable
+
+**CI/CD:** GitHub Actions automatically runs validation on all pushes and pull requests to ensure repository health.
+
 ### Usage
 
 Start with these key documents:
