@@ -40,22 +40,28 @@ This is a markdown-based knowledge base optimized for use with [Obsidian](https:
 
 ### Validation
 
-This repository includes automated validation to ensure structure and quality:
+This repository includes comprehensive automated testing to ensure quality:
 
 ```bash
-# Run validation checks
+# Run all tests (recommended)
 make test
 
-# Or directly
+# Run unit tests only
+python3 test_validate.py
+
+# Run legacy validation only
 python3 validate.py
 ```
 
-The validation script checks:
-- Directory structure integrity
-- Required files exist
-- Markdown files are readable
+The test suite validates:
+- **Repository structure**: Required directories and files exist
+- **Markdown integrity**: All files are readable and non-empty
+- **Wiki-link validation**: Obsidian [[wiki-links]] point to existing files
+- **Security**: No secrets or API keys committed
+- **CI configuration**: GitHub Actions properly configured
+- **Documentation accuracy**: README matches actual capabilities
 
-**CI/CD:** GitHub Actions automatically runs validation on all pushes and pull requests to ensure repository health.
+**CI/CD:** GitHub Actions automatically runs the full test suite on all pushes and pull requests, enforcing a hard quality gate.
 
 ### Usage
 
