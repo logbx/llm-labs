@@ -56,7 +56,7 @@ python3 validate.py
 The test suite validates:
 - **Repository structure**: Required directories and files exist
 - **Markdown integrity**: All files are readable and non-empty
-- **Wiki-link validation**: Obsidian [[wiki-links]] point to existing files
+- **Wiki-link validation**: Obsidian-style internal links point to existing files
 - **Security**: No secrets or API keys committed
 - **CI configuration**: GitHub Actions properly configured
 - **Documentation accuracy**: README matches actual capabilities
